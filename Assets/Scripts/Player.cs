@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody playerRb;
-    [SerializeField] float jumpForce = 10;
+    [SerializeField] float jumpForce = 15;
     [SerializeField] float playerSpeed = 10;
     public bool isOnGround = true;
 
