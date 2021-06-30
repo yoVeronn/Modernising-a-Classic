@@ -47,15 +47,12 @@ public class Player : MonoBehaviour
         {
             isOnGround = true;
         }
-    }
-    
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
+        else if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
             // to decrease health from health bar
             Debug.Log("Player injured, health -5");
         }
     }
+    
 }

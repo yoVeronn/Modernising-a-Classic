@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemyVerticalPrefabs;
     public GameObject[] enemyHorizontalPrefabs;
     private float startDelay = 2;
-    private float repeatRate = 2;
+    private float repeatRate = 4;
 
     // Start is called before the first frame update
     void Start()
