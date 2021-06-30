@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerFat : MonoBehaviour
 {
-    private Rigidbody playerRb;
+    private Rigidbody playerFatRb;
     [SerializeField] float jumpForce = 10;
     [SerializeField] float playerSpeed = 10;
     public bool isOnGround = true;
+    private float powerupStrength = 15;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerRb = GetComponent<Rigidbody>();
+        playerFatRb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -30,15 +31,17 @@ public class Player : MonoBehaviour
         // z-axis movement
         float forwardInput = Input.GetAxis("Vertical");
 
-        playerRb.AddForce(Vector3.right * playerSpeed * horizontalInput);
-        playerRb.AddForce(Vector3.forward * playerSpeed * forwardInput);
+        playerFatRb.AddForce(Vector3.right * playerSpeed * horizontalInput);
+        playerFatRb.AddForce(Vector3.forward * playerSpeed * forwardInput);
 
         // jump
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerFatRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
         }
+
+        // add extra bouncy force
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -47,15 +50,12 @@ public class Player : MonoBehaviour
         {
             isOnGround = true;
         }
-    }
-    
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
+
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
-            // to decrease health from health bar
-            Debug.Log("Player injured, health -5");
+            Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 awayFromPlayer = (collision.gameObject.transform.position - transform.position);
+            enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
         }
     }
 }
