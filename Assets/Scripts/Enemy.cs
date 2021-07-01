@@ -10,9 +10,10 @@ public class Enemy : MonoBehaviour
     private Rigidbody enemyRb;
     private GameObject player;
     private GameObject playerFat;
-    private float lowerBound = -1;
+    private float lowerBoundY = -1;
     private float minPosX = -25f;
     private float maxPosX = 25f;
+    private float zBound = 5;
 
     //private GameObject enemy;
     //private bool slashLeft, slashRight, slashUp, slashDown;
@@ -55,7 +56,13 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             //UI: AddScore++
         }
-        if (transform.position.y < lowerBound)
+        if (transform.position.y < lowerBoundY)
+        {
+            Destroy(gameObject);
+            // UI: AddScore++
+        }
+
+        if ((transform.position.z < -zBound) || (transform.position.z > zBound))
         {
             Destroy(gameObject);
             // UI: AddScore++

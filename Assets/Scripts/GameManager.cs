@@ -6,31 +6,76 @@ public class GameManager : MonoBehaviour
 { 
     public GameObject[] enemyVerticalPrefabs;
     public GameObject[] enemyHorizontalPrefabs;
-    private float startDelay = 2;
-    private float repeatRate = 4;
+    public GameObject finalBoss;
+    private float startDelay = 1;
+    private float minRepeatRate = 1;
+    private float maxRepeatRate = 2.5f;
+
+    public bool waveActive = true;
+    public int waveNumber = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnVerticalEnemy", startDelay, repeatRate);
-        InvokeRepeating("SpawnHorizontalEnemy", startDelay, repeatRate);
+        SpawnEnemyWave(waveNumber);
+        StartCoroutine(waveTimer());
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+
+        if (waveActive == false) // prev wave ended
+        {
+            if (waveNumber < 5)
+            {   
+                waveNumber++;
+                Debug.Log("Wave " + waveNumber);
+                // UI: change background
+                SpawnEnemyWave(waveNumber);
+                StartCoroutine(waveTimer());
+            }
+
+            else if (waveNumber == 5)
+            {
+                StopCoroutine(waveTimer());
+                Debug.Log("Final boss");
+                // UI: change background
+                SpawnFinalBoss();
+            }
+        }
+    }
+
+    IEnumerator waveTimer()
+    {
+        yield return new WaitForSeconds(20);
+        waveActive = false;
+    }
+
+    void SpawnEnemyWave(int waveNumber)
+    {
+        waveActive = true;
+        InvokeRepeating("SpawnVerticalEnemy", startDelay, Random.Range(minRepeatRate, maxRepeatRate));
+        InvokeRepeating("SpawnHorizontalEnemy", startDelay, Random.Range(minRepeatRate, maxRepeatRate));
     }
 
     void SpawnVerticalEnemy()
     {
-        int verticalIndex = Random.Range(0, enemyVerticalPrefabs.Length);
+        int verticalIndex = Random.Range(0, waveNumber);
         Instantiate(enemyVerticalPrefabs[verticalIndex], new Vector3(Random.Range(-20, 20), Random.Range(1, 10), 0), enemyVerticalPrefabs[verticalIndex].transform.rotation);
     }
 
     void SpawnHorizontalEnemy()
     {
-        int horizontalIndex = Random.Range(0, enemyHorizontalPrefabs.Length);
+        int horizontalIndex = Random.Range(0, waveNumber);
         Instantiate(enemyHorizontalPrefabs[horizontalIndex], new Vector3(Random.Range(-20, 20), Random.Range(1, 5), 0), enemyHorizontalPrefabs[horizontalIndex].transform.rotation);
+    }
+
+    void SpawnFinalBoss()
+    {
+        waveActive = true;
+        Instantiate(finalBoss, new Vector3(20, Random.Range(1, 5), 0), finalBoss.transform.rotation);
     }
 }

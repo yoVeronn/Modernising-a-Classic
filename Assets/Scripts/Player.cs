@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         }
 
         // press W for bomb
-        if (Input.GetKeyDown(KeyCode.W) && gravityLaunching != true)
+        else if (Input.GetKeyDown(KeyCode.W) && gravityLaunching != true)
         {
             gravityLaunching = true;
             LaunchAntiGravity();

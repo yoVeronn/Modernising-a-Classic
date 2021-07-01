@@ -344,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415898247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: -0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -661,9 +661,17 @@ MonoBehaviour:
   - {fileID: 1456290021515592258, guid: f4723adab24158d4189d552421921402, type: 3}
   - {fileID: 631057261101471461, guid: 474a6ad2a28b1fb4eaee67abebc18a02, type: 3}
   - {fileID: 8448789731731853948, guid: 183421fd8bb8869459b0fe25938b6978, type: 3}
+  - {fileID: 8448789731731853948, guid: 4900a11faed7ea846b909af01dfd7856, type: 3}
+  - {fileID: 8448789731731853948, guid: 23a7aeb857cead44185c0018ce1d48cc, type: 3}
   enemyHorizontalPrefabs:
   - {fileID: 4619956320091954961, guid: 99f327f39ef748a40ba54d0ca88b459d, type: 3}
   - {fileID: 8089665917284990732, guid: 1c13f2a1d33d17945ac15d9bb553c582, type: 3}
+  - {fileID: 8089665917284990732, guid: a9a5f2acc35ae034fa78e0bd241551b8, type: 3}
+  - {fileID: 8089665917284990732, guid: 04949b343b7ee7149a907d49f22c0cf5, type: 3}
+  - {fileID: 8089665917284990732, guid: a50fd243446f0bb4fba9a7d8ab562606, type: 3}
+  finalBoss: {fileID: 8089665917284990732, guid: 9bb3647e9e6e4184b90fa8ae207d1ee4, type: 3}
+  waveActive: 1
+  waveNumber: 1
 --- !u!4 &1227218582
 Transform:
   m_ObjectHideFlags: 0

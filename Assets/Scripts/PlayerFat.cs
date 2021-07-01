@@ -96,7 +96,7 @@ public class PlayerFat : MonoBehaviour
         }
     }
 
-    IEnumerator Smash() // working, but player flies far away after explosion
+    IEnumerator Smash()
     {
         var enemies = FindObjectsOfType<Enemy>();
 
