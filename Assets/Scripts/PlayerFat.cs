@@ -10,6 +10,10 @@ public class PlayerFat : MonoBehaviour
     public bool isOnGround = true;
     private float powerupStrength = 15;
 
+    private float minPosX = -25f;
+    private float maxPosX = 25f;
+    private float lowerBound = -1;
+
     // values to be tested and confirmed
     [SerializeField] float hangTime = 0.2f;
     [SerializeField] float smashSpeed = 20;
@@ -38,6 +42,23 @@ public class PlayerFat : MonoBehaviour
         {
             smashing = true;
             StartCoroutine(Smash());
+        }
+
+        // preventing player from falling out of map
+        if (transform.position.x < minPosX)
+        {
+            transform.position = new Vector3(minPosX, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x > maxPosX)
+        {
+            transform.position = new Vector3(maxPosX, transform.position.y, transform.position.z);
+        }
+
+        // game over if player falls out of map
+        if (transform.position.y < lowerBound)
+        {
+            Debug.Log("Game Over");
+            // UI: game over scene activated
         }
     }
 

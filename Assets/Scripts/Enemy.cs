@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     private GameObject player;
     private GameObject playerFat;
     private float lowerBound = -1;
+    private float minPosX = -25f;
+    private float maxPosX = 25f;
 
     //private GameObject enemy;
     //private bool slashLeft, slashRight, slashUp, slashDown;
@@ -41,12 +43,22 @@ public class Enemy : MonoBehaviour
             Vector3 lookDirection = (playerFat.transform.position - transform.position).normalized;
             enemyRb.AddForce(lookDirection * enemySpeed);
         }
-        
 
-        //destroy enemies offscreen
+        //destroy enemies offscreen, add to score
+        if (transform.position.x < minPosX)
+        {
+            Destroy(gameObject);
+            //UI: AddScore++
+        }
+        else if (transform.position.x > maxPosX)
+        {
+            Destroy(gameObject);
+            //UI: AddScore++
+        }
         if (transform.position.y < lowerBound)
         {
             Destroy(gameObject);
+            // UI: AddScore++
         }
 
         //if (Input.GetMouseButtonDown(0))
@@ -54,6 +66,9 @@ public class Enemy : MonoBehaviour
         //    // if within slashRadius?
         //    Destroy(gameObject);
         //}
+
+        // IF ANTI-GRAVITY IS PRESENT
+        // add navMesh AI
     }
 
     private void OnMouseDown()

@@ -18,8 +18,15 @@ public class Player : MonoBehaviour
 
     public GameObject bombPrefab;
     private GameObject tmpBomb;
-    private Coroutine powerupCountdown;
-    private bool bombLaunching; 
+    private bool bombLaunching;
+
+    public GameObject gravityPrefab;
+    private GameObject tmpGravity;
+    private bool gravityLaunching;
+
+    private float minPosX = -25f;
+    private float maxPosX = 25f;
+    private float lowerBound = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +39,38 @@ public class Player : MonoBehaviour
     void Update()
     {
         MovePlayer();
-
+        
+        // press S for bomb
         if (Input.GetKeyDown(KeyCode.S) && bombLaunching != true)
         {
             bombLaunching = true;
             LaunchBomb();
-            StartCoroutine(PowerupCountdownRoutine());
+            StartCoroutine(BombLaunchCountdownRoutine());
+        }
+
+        // press W for bomb
+        if (Input.GetKeyDown(KeyCode.W) && gravityLaunching != true)
+        {
+            gravityLaunching = true;
+            LaunchAntiGravity();
+            StartCoroutine(GravityLaunchCountdownRoutine());
+        }
+
+        // preventing player from falling out of map
+        if (transform.position.x < minPosX)
+        {
+            transform.position = new Vector3(minPosX, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x > maxPosX)
+        {
+            transform.position = new Vector3(maxPosX, transform.position.y, transform.position.z);
+        }
+        
+        // game over if player falls out of map
+        if (transform.position.y < lowerBound)
+        {
+            Debug.Log("Game Over");
+            // UI: game over scene activated
         }
     }
 
@@ -168,10 +201,21 @@ public class Player : MonoBehaviour
         tmpBomb = Instantiate(bombPrefab, transform.position + Vector3.up, Quaternion.identity);
     }
 
-    IEnumerator PowerupCountdownRoutine()
+    IEnumerator BombLaunchCountdownRoutine()
     {
         yield return new WaitForSeconds(2);
         bombLaunching = false;
+    }
+
+    void LaunchAntiGravity()
+    {
+        tmpGravity = Instantiate(gravityPrefab, transform.position + Vector3.right, Quaternion.identity);
+    }
+
+    IEnumerator GravityLaunchCountdownRoutine()
+    {
+        yield return new WaitForSeconds(2);
+        gravityLaunching = false;
     }
 
 }

@@ -5,9 +5,6 @@ using UnityEngine;
 public class BombTrajectory : MonoBehaviour
 {
     private Rigidbody bombRb;
-    private Transform target;
-    //private float speed = 15.0f;
-    private bool homing;
 
     private float explosionForce = 50;
     private float explosionRadius = 30;
