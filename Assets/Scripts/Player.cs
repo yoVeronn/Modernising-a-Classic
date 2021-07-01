@@ -102,8 +102,8 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
-            // to decrease health from health bar
-            Debug.Log("Player injured, health -5");
+            
+            UIManager.instance.UpdateHealth(5);  // to decrease health from health bar
         }
     }
 
