@@ -29,16 +29,19 @@ public class GameManager : Singleton<GameManager>
 
         if (waveActive == false) // prev wave ended
         {
-            for (int waveNumber = 1; waveNumber < 6; waveNumber++)
-            {   
+
+            if (waveNumber < 5)
+            { 
                 UIManager.instance.UpdateWave(waveNumber);
 
                 // UI: change background  //maybe change background lighting
                 SpawnEnemyWave(waveNumber);
                 StartCoroutine(waveTimer());
+
+                waveNumber++;
             }
 
-            if (waveNumber == 5)
+            else if (waveNumber >= 5)
             {
                 StopCoroutine(waveTimer());
                 Debug.Log("Final boss");
