@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     private float maxPosX = 25f;
     private float zBound = 5;
 
+    private int scorePerEnemy = 5;
+
     //private GameObject enemy;
     //private bool slashLeft, slashRight, slashUp, slashDown;
     //private Vector2 startPosMouse, mouseDelta;
@@ -50,22 +52,26 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             //UI: AddScore++
+            UIManager.instance.UpdateScore(scorePerEnemy);
         }
         else if (transform.position.x > maxPosX)
         {
             Destroy(gameObject);
             //UI: AddScore++
+            UIManager.instance.UpdateScore(scorePerEnemy);
         }
         if (transform.position.y < lowerBoundY)
         {
             Destroy(gameObject);
             // UI: AddScore++
+            UIManager.instance.UpdateScore(scorePerEnemy);
         }
 
         if ((transform.position.z < -zBound) || (transform.position.z > zBound))
         {
             Destroy(gameObject);
             // UI: AddScore++
+            UIManager.instance.UpdateScore(scorePerEnemy);
         }
 
         //if (Input.GetMouseButtonDown(0))

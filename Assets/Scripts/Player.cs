@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Player : MonoBehaviour
 {
+    private Animator animator;
+
     private Rigidbody playerRb;
     [SerializeField] float jumpForce = 250;
     [SerializeField] float playerSpeed = 50;
@@ -31,6 +34,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         playerRb = GetComponent<Rigidbody>();
         //enemy = GameObject.Find("Enemy");
     }
@@ -85,11 +89,15 @@ public class Player : MonoBehaviour
         playerRb.AddForce(Vector3.right * playerSpeed * horizontalInput);
         playerRb.AddForce(Vector3.forward * playerSpeed * forwardInput);
 
+        //handling move animations
+        
+
         // jump
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
+            animator.SetBool("isJumping", true);
         }
     }
 
@@ -98,12 +106,13 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+            animator.SetBool("isJumping", false);
         }
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
-            // to decrease health from health bar
-            Debug.Log("Player injured, health -5");
+            
+            UIManager.instance.UpdateHealth(5);  // to decrease health from health bar
         }
     }
 

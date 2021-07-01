@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 { 
     public GameObject[] enemyVerticalPrefabs;
     public GameObject[] enemyHorizontalPrefabs;
@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private float maxRepeatRate = 2.5f;
 
     public bool waveActive = true;
-    public int waveNumber = 1;
+    private int waveNumber = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -29,16 +29,16 @@ public class GameManager : MonoBehaviour
 
         if (waveActive == false) // prev wave ended
         {
-            if (waveNumber < 5)
+            for (int waveNumber = 1; waveNumber < 6; waveNumber++)
             {   
-                waveNumber++;
-                Debug.Log("Wave " + waveNumber);
-                // UI: change background
+                UIManager.instance.UpdateWave(waveNumber);
+
+                // UI: change background  //maybe change background lighting
                 SpawnEnemyWave(waveNumber);
                 StartCoroutine(waveTimer());
             }
 
-            else if (waveNumber == 5)
+            if (waveNumber == 5)
             {
                 StopCoroutine(waveTimer());
                 Debug.Log("Final boss");
