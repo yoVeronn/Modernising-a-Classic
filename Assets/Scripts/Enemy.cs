@@ -12,6 +12,12 @@ public class Enemy : MonoBehaviour
     private GameObject playerFat;
     private float lowerBound = -1;
 
+    //private GameObject enemy;
+    //private bool slashLeft, slashRight, slashUp, slashDown;
+    //private Vector2 startPosMouse, mouseDelta;
+    //private bool slashing = false;
+    //private float slashRadius = 5.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,5 +48,23 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    // if within slashRadius?
+        //    Destroy(gameObject);
+        //}
+    }
+
+    private void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
+
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
+       // Instantiate(explosionParticle, transform.position, explosionParticke.transform.rotation);
+
     }
 }
