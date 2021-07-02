@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour
 
     private int scorePerEnemy = 5;
 
+    public ParticleSystem travelEffect;
+    public ParticleSystem explosionEffect;
+
     //private GameObject enemy;
     //private bool slashLeft, slashRight, slashUp, slashDown;
     //private Vector2 startPosMouse, mouseDelta;
@@ -39,6 +42,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        travelEffect.Play();
+
         // player attraction
         if (transformPlayerScript.PlayerActive == true)
         {
@@ -97,7 +102,6 @@ public class Enemy : MonoBehaviour
     public void DestroyEnemy()
     {
         Destroy(gameObject);
-       // Instantiate(explosionParticle, transform.position, explosionParticke.transform.rotation);
 
     }
 }
