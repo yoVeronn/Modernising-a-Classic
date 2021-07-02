@@ -2668,6 +2668,7 @@ MonoBehaviour:
   - {fileID: 8089665917284990732, guid: a50fd243446f0bb4fba9a7d8ab562606, type: 3}
   finalBoss: {fileID: 8089665917284990732, guid: 9bb3647e9e6e4184b90fa8ae207d1ee4, type: 3}
   waveActive: 1
+  waveNumber: 1
 --- !u!4 &1227218582
 Transform:
   m_ObjectHideFlags: 0
@@ -3389,7 +3390,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.509434, g: 0.3471181, b: 0.1701317, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

@@ -12,12 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] float playerSpeed = 50;
     public bool isOnGround = true;
 
-    //public static bool GetMouseButtonDown(int button);
-    //private GameObject enemy;
-    //private bool slashLeft, slashRight, slashUp, slashDown;
-    //private Vector2 startPosMouse, mouseDelta;
-    //private bool slashing = false;
-    //private float slashRadius = 5.0f;
+    private GameObject enemy;
+    private bool hammer = false;
 
     public GameObject[] bombPrefab;
     private GameObject tmpBomb;
@@ -59,6 +55,9 @@ public class Player : MonoBehaviour
             LaunchAntiGravity();
             StartCoroutine(GravityLaunchCountdownRoutine());
         }
+
+        // left mouse button for hammer
+        Hammer();
 
         PlayerBounds();
 
@@ -141,95 +140,37 @@ public class Player : MonoBehaviour
 
         }
     }
+    
+    void Hammer()
+    {
+        if (Input.GetMouseButtonDown(0) && hammer == false)
+        {
+            Debug.Log("Hammer active");
+            hammer = true;
 
-    //void Slash()
-    //{
-    //    // mouse slashing to destroy enemies
-    //    slashLeft = slashRight = slashUp = slashDown = false;
+            var center = transform.position;
+            float radius = 4;
 
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        Debug.Log("Slash active");
-    //        slashing = true;
-    //        startPosMouse = Input.mousePosition;
-    //    }
-    //    else if (Input.GetMouseButtonUp(0))
-    //    {
-    //        Debug.Log("Slash deactivated");
-    //        slashing = false;
-    //        Reset();
-    //    }
-
-    //    // check directions of mouse slash
-    //    mouseDelta = Vector2.zero;
-    //    if (slashing == true)
-    //    {
-    //        mouseDelta = new Vector2((Input.mousePosition.x - startPosMouse.x), (Input.mousePosition.y - startPosMouse.y));
-
-    //        float slashX = mouseDelta.x;
-    //        float slashY = mouseDelta.y;
-
-    //        if (slashX < 0)
-    //        {
-    //            slashLeft = true;
-    //            Debug.Log("Slash Left");
-    //        }
-
-    //        if (slashX > 0)
-    //        {
-    //            slashRight = true;
-    //        }
-
-    //        if (slashY < 0)
-    //        {
-    //            slashDown = true;
-    //        }
-
-    //        if (slashY > 0)
-    //        {
-    //            slashUp = true;
-    //        }
-
-    //        Reset();
-    //    }
-
-    //    // find enemies within slash radius and destroy
-    //    if (slashLeft)
-    //    {
-    //        if ((transform.position.x - enemy.transform.position.x) < slashRadius)
-    //        {
-    //            Destroy(enemy);
-    //            Debug.Log("Left Attack");
-    //        }
-    //    }
-    //    if (slashRight)
-    //    {
-    //        if ((enemy.transform.position.x - transform.position.x) < slashRadius)
-    //        {
-    //            Destroy(enemy);
-    //            Debug.Log("Right Attack");
-    //        }
-    //    }
-    //    if (slashDown)
-    //    {
-    //        if ((transform.position.y - enemy.transform.position.y) < slashRadius)
-    //        {
-    //            Destroy(enemy);
-    //        }
-    //    }
-    //    if (slashUp)
-    //    {
-    //        if ((enemy.transform.position.y - transform.position.y) < slashRadius)
-    //        {
-    //            Destroy(enemy);
-    //        }
-    //    }
-    //}
-    //private void Reset()
-    //{
-    //    startPosMouse = mouseDelta = Vector2.zero;
-    //    slashing = false;
-    //}
+            Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+            foreach (var hitCollider in hitColliders)
+            {
+                hitCollider.SendMessage("AddDamage");
+                // destroy enemy
+                if (hitCollider.gameObject.CompareTag("Enemy"))
+                {
+                    Destroy(hitCollider.gameObject);
+                }
+                // UI: hammer animation
+                // UI: particle effect, sound effect
+                // UI: AddScore per enemy
+            }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            Debug.Log("Hammer deactivated");
+            hammer = false;
+        }
+    }
 
     void LaunchBomb()  //bombDropped animator bool here
     {
