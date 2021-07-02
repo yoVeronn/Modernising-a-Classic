@@ -7,6 +7,8 @@ public class AntiGravity : MonoBehaviour
     private Rigidbody cubeRb;
     private float aliveTimer = 3.5f;
 
+    private int scorePerEnemy = 5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class AntiGravity : MonoBehaviour
         if (col.gameObject.CompareTag("Enemy"))
         {
             Destroy(col.gameObject);
+            // UI AddScore
+            UIManager.instance.UpdateScore(scorePerEnemy);
             // Add Particle effect for food disappearing
         }
     }

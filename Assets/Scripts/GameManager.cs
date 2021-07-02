@@ -12,7 +12,7 @@ public class GameManager : Singleton<GameManager>
     private float maxRepeatRate = 2.5f;
 
     public bool waveActive = true;
-    private int waveNumber = 1;
+    public int waveNumber = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +43,7 @@ public class GameManager : Singleton<GameManager>
 
             else if (waveNumber >= 5)
             {
+                waveNumber = 5;
                 StopCoroutine(waveTimer());
                 Debug.Log("Final boss");
                 // UI: change background
@@ -53,7 +54,7 @@ public class GameManager : Singleton<GameManager>
 
     IEnumerator waveTimer()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(15);
         waveActive = false;
     }
 

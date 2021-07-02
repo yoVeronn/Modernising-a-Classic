@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerFat : MonoBehaviour
 {
     private Rigidbody playerFatRb;
-    [SerializeField] float jumpForce = 50;
-    [SerializeField] float playerSpeed = 10;
+    [SerializeField] float jumpForce = 250;
+    [SerializeField] float playerSpeed = 80;
     public bool isOnGround = true;
     private float powerupStrength = 15;
 

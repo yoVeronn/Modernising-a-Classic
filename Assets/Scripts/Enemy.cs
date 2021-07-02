@@ -7,9 +7,12 @@ public class Enemy : MonoBehaviour
     private TransformPlayer transformPlayerScript;
 
     [SerializeField] float enemySpeed = 3;
+    [SerializeField] float enemySpeedGravity = 10;
     private Rigidbody enemyRb;
     private GameObject player;
     private GameObject playerFat;
+    private GameObject antiGravity;
+
     private float lowerBoundY = -1;
     private float minPosX = -25f;
     private float maxPosX = 25f;
@@ -29,23 +32,30 @@ public class Enemy : MonoBehaviour
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
         playerFat = GameObject.Find("PlayerFat");
+        antiGravity = GameObject.Find("AntiGravity");
         transformPlayerScript = GameObject.Find("GameManager").GetComponent<TransformPlayer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // player attraction
         if (transformPlayerScript.PlayerActive == true)
         {
-            Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-            enemyRb.AddForce(lookDirection * enemySpeed);
+            Vector3 lookDirectionNormal = (player.transform.position - transform.position).normalized;
+            enemyRb.AddForce(lookDirectionNormal * enemySpeed);
         }
 
+        // fat player attraction
         else if (transformPlayerScript.PlayerFatActive == true)
         {
-            Vector3 lookDirection = (playerFat.transform.position - transform.position).normalized;
-            enemyRb.AddForce(lookDirection * enemySpeed);
+            Vector3 lookDirectionFat = (playerFat.transform.position - transform.position).normalized;
+            enemyRb.AddForce(lookDirectionFat * enemySpeed);
         }
+
+        //// anti-gravity attraction
+        //Vector3 lookDirectionGravity = (antiGravity.transform.position - transform.position).normalized;
+        //enemyRb.AddForce(lookDirectionGravity * enemySpeedGravity);
 
         //destroy enemies offscreen, add to score
         if (transform.position.x < minPosX)

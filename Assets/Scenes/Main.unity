@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 419660235}
   m_Layer: 0
   m_Name: PlayerFat
-  m_TagString: Player
+  m_TagString: PlayerFat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -938,14 +938,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419660229}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1.5, z: 2}
+  m_LocalRotation: {x: -0, y: -0.48480988, z: -0, w: 0.8746196}
+  m_LocalPosition: {x: 0.0015023295, y: 0, z: -0.014606409}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1200350730}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -58, z: 0}
 --- !u!54 &419660234
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -974,8 +974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ee324a57beea849aa361aa18dce20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 50
-  playerSpeed: 10
+  jumpForce: 250
+  playerSpeed: 80
   isOnGround: 1
   hangTime: 0.2
   smashSpeed: 20
