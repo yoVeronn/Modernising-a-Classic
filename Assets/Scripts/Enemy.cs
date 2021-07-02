@@ -94,11 +94,6 @@ public class Enemy : MonoBehaviour
         // add navMesh AI
     }
 
-    private void OnMouseDown()
-    {
-        Destroy(gameObject);
-    }
-
     public void DestroyEnemy()
     {
         Destroy(gameObject);
