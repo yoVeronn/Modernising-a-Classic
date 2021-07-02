@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     private float maxPosX = 25f;
     private float lowerBound = -1;
 
+    public ParticleSystem explosionEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -157,6 +159,7 @@ public class Player : MonoBehaviour
                 // destroy enemy
                 if (hitCollider.gameObject.CompareTag("Enemy"))
                 {
+                    explosionEffect.Play();
                     Destroy(hitCollider.gameObject);
                 }
                 // UI: hammer animation

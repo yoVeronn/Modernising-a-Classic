@@ -1926,3 +1926,51 @@ System memory in use after: 84.2 MB.
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2211.
 Total: 20.798700 ms (FindLiveObjects: 2.548800 ms CreateObjectMapping: 0.148600 ms MarkObjects: 16.891200 ms  DeleteObjects: 1.207700 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007998 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.132 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1540 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.1 MB.
+System memory in use after: 84.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2215.
+Total: 3.230800 ms (FindLiveObjects: 0.220200 ms CreateObjectMapping: 0.066300 ms MarkObjects: 2.297300 ms  DeleteObjects: 0.645300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1660.796794 seconds.
+  path: Assets/Scripts/DirectionalLight.cs
+  artifactKey: Guid(06c5872879383e1438f79bdb829d031f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DirectionalLight.cs using Guid(06c5872879383e1438f79bdb829d031f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b17a3463fea14454000b066b564aa6f') in 0.020825 seconds
+  Import took 0.027935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039464 seconds.
+  path: Assets/Scripts/DirectionalLight.cs
+  artifactKey: Guid(06c5872879383e1438f79bdb829d031f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DirectionalLight.cs using Guid(06c5872879383e1438f79bdb829d031f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b17a3463fea14454000b066b564aa6f') in 0.008089 seconds
+  Import took 0.017310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.307063 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(a02e17dc33f3d1646a3fa0e1ab8cbe23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(a02e17dc33f3d1646a3fa0e1ab8cbe23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35f1f1a299e127910850cf91b692d2cf') in 0.035698 seconds
+  Import took 0.040113 seconds .
+
