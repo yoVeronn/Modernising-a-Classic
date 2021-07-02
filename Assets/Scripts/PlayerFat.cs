@@ -23,6 +23,8 @@ public class PlayerFat : MonoBehaviour
     public bool smashing = false;
     float floorY;
 
+    public ParticleSystem explosionEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -122,6 +124,7 @@ public class PlayerFat : MonoBehaviour
             if(enemies[i] != null)
             {
                 enemies[i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, 1.0f, ForceMode.Impulse);
+                Instantiate(explosionEffect, transform.position, explosionEffect.transform.rotation);
             }
         }
 
