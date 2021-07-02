@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     //private bool slashing = false;
     //private float slashRadius = 5.0f;
 
-    public GameObject bombPrefab;
+    public GameObject[] bombPrefab;
     private GameObject tmpBomb;
     private bool bombLaunching;
 
@@ -60,28 +60,31 @@ public class Player : MonoBehaviour
             StartCoroutine(GravityLaunchCountdownRoutine());
         }
 
-        // preventing player from falling out of map
-        if (transform.position.x < minPosX)
+        PlayerBounds();
+
+        if(!animator.IsInTransition(0))
         {
-            transform.position = new Vector3(minPosX, transform.position.y, transform.position.z);
+            animator.SetBool("isIdle", true);
         }
-        else if (transform.position.x > maxPosX)
+        else
         {
-            transform.position = new Vector3(maxPosX, transform.position.y, transform.position.z);
-        }
-        
-        // game over if player falls out of map
-        if (transform.position.y < lowerBound)
-        {
-            Debug.Log("Game Over");
-            // UI: game over scene activated
+            animator.SetBool("isIdle", false);
         }
     }
 
     void MovePlayer() // move player with arrow keys
     {
+
         // x-axis movement
         float horizontalInput = Input.GetAxis("Horizontal");
+        if(horizontalInput > 0.5)
+        {
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        }
+        else if(horizontalInput < -0.5)
+        {
+            transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+        }
 
         // z-axis movement
         float forwardInput = Input.GetAxis("Vertical");
@@ -90,6 +93,7 @@ public class Player : MonoBehaviour
         playerRb.AddForce(Vector3.forward * playerSpeed * forwardInput);
 
         //handling move animations
+        animator.SetFloat("horizontal", Mathf.Abs(horizontalInput));
         
 
         // jump
@@ -113,6 +117,28 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             
             UIManager.instance.UpdateHealth(5);  // to decrease health from health bar
+        }
+    }
+
+    private void PlayerBounds()
+    {
+        // preventing player from falling out of map
+        if (transform.position.x < minPosX)
+        {
+            transform.position = new Vector3(minPosX, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x > maxPosX)
+        {
+            transform.position = new Vector3(maxPosX, transform.position.y, transform.position.z);
+        }
+
+        // game over if player falls out of map
+        if (transform.position.y < lowerBound)
+        {
+            Debug.Log("Game Over");
+            // UI: game over scene activated
+
+
         }
     }
 
@@ -205,26 +231,32 @@ public class Player : MonoBehaviour
     //    slashing = false;
     //}
 
-    void LaunchBomb()
+    void LaunchBomb()  //bombDropped animator bool here
     {
-        tmpBomb = Instantiate(bombPrefab, transform.position + Vector3.up, Quaternion.identity);
+        tmpBomb = Instantiate(bombPrefab[Random.Range(0, bombPrefab.Length)], transform.position + Vector3.up, Quaternion.Euler(180f,0f,0f));
+        animator.SetBool("bombDropped", true);
     }
 
     IEnumerator BombLaunchCountdownRoutine()
     {
         yield return new WaitForSeconds(2);
         bombLaunching = false;
+        animator.SetBool("bombDropped", false);
     }
 
     void LaunchAntiGravity()
     {
         tmpGravity = Instantiate(gravityPrefab, transform.position + Vector3.right, Quaternion.identity);
+        animator.SetBool("bombDropped", true);
+
     }
 
     IEnumerator GravityLaunchCountdownRoutine()
     {
         yield return new WaitForSeconds(2);
         gravityLaunching = false;
+        animator.SetBool("bombDropped", false);
+
     }
 
 }
