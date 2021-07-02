@@ -8,17 +8,25 @@ public class BombTrajectory : MonoBehaviour
 
     private float explosionForce = 50;
     private float explosionRadius = 30;
+    
+    public ParticleSystem travelEffect;
+    public ParticleSystem explosionEffect;
 
-    // Update is called once per frame
     void Start()
     {
         bombRb = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        travelEffect.Play();
     }
 
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Ground"))
         {
+            
             var enemies = FindObjectsOfType<Enemy>();
             for (int i = 0; i < enemies.Length; i++)
             {
@@ -26,6 +34,7 @@ public class BombTrajectory : MonoBehaviour
                 if (enemies[i] != null)
                 {
                     enemies[i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, 1.0f, ForceMode.Impulse);
+                    Instantiate(explosionEffect, transform.position, explosionEffect.transform.rotation);
                     Destroy(gameObject);
                 }
             }

@@ -15,11 +15,11 @@ C:/Users/banve/Desktop/Create with Code/GITHUB/Modernising-a-Classic
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62218
+56152
 Successfully changed project path to: C:/Users/banve/Desktop/Create with Code/GITHUB/Modernising-a-Classic
 C:/Users/banve/Desktop/Create with Code/GITHUB/Modernising-a-Classic
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 87.83 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 34.74 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.9f1 (108be757e447)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/Resources/UnitySubsystems
@@ -35,137 +35,569 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56336
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56580
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004140 seconds.
+Registered in 0.003176 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 68.25 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 61.11 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.097 seconds
+- Completed reload, in  1.329 seconds
 Platform modules already initialized, skipping
-Registering precompiled user dll's ...
-Registered in 0.001825 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.715 seconds
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1515 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 78.5 MB.
-System memory in use after: 78.6 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1965.
-Total: 3.671800 ms (FindLiveObjects: 0.183800 ms CreateObjectMapping: 0.064100 ms MarkObjects: 3.264500 ms  DeleteObjects: 0.157600 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scripts/Player.cs
-  artifactKey: Guid(7a82a5c015fb4044896f0413d2c8d5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player.cs using Guid(7a82a5c015fb4044896f0413d2c8d5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6b34da672f78a9a2083b34739fba108') in 0.033071 seconds
-  Import took 0.038335 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 449.193837 seconds.
-  path: Assets/Scripts/Player.cs
-  artifactKey: Guid(7a82a5c015fb4044896f0413d2c8d5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player.cs using Guid(7a82a5c015fb4044896f0413d2c8d5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8c64f2daf9e87f9ee39aa953dd47555') in 0.004256 seconds
-  Import took 0.009284 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002004 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.723 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1503 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.7 MB.
-System memory in use after: 77.8 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1968.
-Total: 3.433600 ms (FindLiveObjects: 0.202000 ms CreateObjectMapping: 0.073800 ms MarkObjects: 3.094400 ms  DeleteObjects: 0.061900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001277 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.663 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1503 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.8 MB.
-System memory in use after: 77.9 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1971.
-Total: 3.421500 ms (FindLiveObjects: 0.188700 ms CreateObjectMapping: 0.065100 ms MarkObjects: 3.107000 ms  DeleteObjects: 0.058800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001794 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.666 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1503 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.8 MB.
-System memory in use after: 77.9 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1974.
-Total: 3.294000 ms (FindLiveObjects: 0.286200 ms CreateObjectMapping: 0.114200 ms MarkObjects: 2.865900 ms  DeleteObjects: 0.025500 ms)
-
-========================================================================
-Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.001766 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.819 seconds
+- Completed reload, in  1.586 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1515 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 78.6 MB.
+System memory in use after: 78.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1965.
+Total: 2.513700 ms (FindLiveObjects: 0.157800 ms CreateObjectMapping: 0.057900 ms MarkObjects: 2.195900 ms  DeleteObjects: 0.100800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/Vertical 1.prefab
+  artifactKey: Guid(29fc7a7247e6a1b419edd7806b5a7052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Vertical 1.prefab using Guid(29fc7a7247e6a1b419edd7806b5a7052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d52ae67e87f71555e4ed63d7e018386') in 0.142094 seconds
+  Import took 0.145500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.238878 seconds.
+  path: Assets/Prefabs/V1Chicken.prefab
+  artifactKey: Guid(29fc7a7247e6a1b419edd7806b5a7052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/V1Chicken.prefab using Guid(29fc7a7247e6a1b419edd7806b5a7052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a36af427945e5156dfee2ee09526e8b') in 0.013094 seconds
+  Import took 0.016252 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001168 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.997 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1503 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.8 MB.
-System memory in use after: 77.9 MB.
+System memory in use before: 81.0 MB.
+System memory in use after: 81.1 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1977.
-Total: 3.836000 ms (FindLiveObjects: 0.230000 ms CreateObjectMapping: 0.098200 ms MarkObjects: 3.444900 ms  DeleteObjects: 0.061100 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1976.
+Total: 1.908200 ms (FindLiveObjects: 0.120300 ms CreateObjectMapping: 0.028400 ms MarkObjects: 1.746200 ms  DeleteObjects: 0.012400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 239.671402 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Chips.prefab
+  artifactKey: Guid(d86ca81cf8e2b784c8d58502235ee8b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Chips.prefab using Guid(d86ca81cf8e2b784c8d58502235ee8b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ae3892ef958f608329837b68ac40b36') in 0.055803 seconds
+  Import took 0.069064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.240981 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Coconut.prefab
+  artifactKey: Guid(45c7dddf851acbb4e94a8fc0ead66eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Coconut.prefab using Guid(45c7dddf851acbb4e94a8fc0ead66eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd909f3593d1d9eb2917def8ccf9efb81') in 0.014593 seconds
+  Import took 0.017474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001525 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Coconut.prefab
+  artifactKey: Guid(45c7dddf851acbb4e94a8fc0ead66eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Coconut.prefab using Guid(45c7dddf851acbb4e94a8fc0ead66eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd909f3593d1d9eb2917def8ccf9efb81') in 0.017096 seconds
+  Import took 0.019553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.452186 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Donut.prefab
+  artifactKey: Guid(931dfc52fd271a846b05a6bf70694fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Donut.prefab using Guid(931dfc52fd271a846b05a6bf70694fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0da6cbe35bf59d48e1d9a84d7288ce5e') in 0.014439 seconds
+  Import took 0.016833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Donut.prefab
+  artifactKey: Guid(931dfc52fd271a846b05a6bf70694fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Donut.prefab using Guid(931dfc52fd271a846b05a6bf70694fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0da6cbe35bf59d48e1d9a84d7288ce5e') in 0.008399 seconds
+  Import took 0.011295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.182277 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Croissant.prefab
+  artifactKey: Guid(94d292219d961b445b269659a3994172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Croissant.prefab using Guid(94d292219d961b445b269659a3994172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9acd1f18f6a842e749bcb78ee572c58') in 0.013461 seconds
+  Import took 0.016125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006430 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Croissant.prefab
+  artifactKey: Guid(94d292219d961b445b269659a3994172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Croissant.prefab using Guid(94d292219d961b445b269659a3994172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9acd1f18f6a842e749bcb78ee572c58') in 0.008140 seconds
+  Import took 0.010939 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001021 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.036 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1503 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.0 MB.
+System memory in use after: 81.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1980.
+Total: 1.944100 ms (FindLiveObjects: 0.137200 ms CreateObjectMapping: 0.047300 ms MarkObjects: 1.743700 ms  DeleteObjects: 0.014600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 169.417440 seconds.
+  path: Assets/Prefabs/Vertical 2.prefab
+  artifactKey: Guid(474a6ad2a28b1fb4eaee67abebc18a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Vertical 2.prefab using Guid(474a6ad2a28b1fb4eaee67abebc18a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76e8b46ca771b703ed45f448031c0dae') in 0.062018 seconds
+  Import took 0.064991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.080516 seconds.
+  path: Assets/Prefabs/V2Coconut.prefab
+  artifactKey: Guid(474a6ad2a28b1fb4eaee67abebc18a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/V2Coconut.prefab using Guid(474a6ad2a28b1fb4eaee67abebc18a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f451a58b8d1d9d82a39292bd886cabb') in 0.014980 seconds
+  Import took 0.019133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.142991 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Mushroom.prefab
+  artifactKey: Guid(630adda25e718324a80512d3e4d69e13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Mushroom.prefab using Guid(630adda25e718324a80512d3e4d69e13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d1323a34514a89da6ae3d1426cba6e') in 0.015473 seconds
+  Import took 0.018534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001851 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Mushroom.prefab
+  artifactKey: Guid(630adda25e718324a80512d3e4d69e13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Mushroom.prefab using Guid(630adda25e718324a80512d3e4d69e13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d1323a34514a89da6ae3d1426cba6e') in 0.008887 seconds
+  Import took 0.012383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.569977 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Drink_01.prefab
+  artifactKey: Guid(1ab6ed6db0b83984bb512a33711b213f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Drink_01.prefab using Guid(1ab6ed6db0b83984bb512a33711b213f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ad69bc1be934aa0aaf4211b750a32b5') in 0.013184 seconds
+  Import took 0.016059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001250 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Drink_01.prefab
+  artifactKey: Guid(1ab6ed6db0b83984bb512a33711b213f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Drink_01.prefab using Guid(1ab6ed6db0b83984bb512a33711b213f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ad69bc1be934aa0aaf4211b750a32b5') in 0.008789 seconds
+  Import took 0.011996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.868643 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Drink_02.prefab
+  artifactKey: Guid(4f544c14cf326b843a5f07e7de41640e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Drink_02.prefab using Guid(4f544c14cf326b843a5f07e7de41640e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b7d43ed1b3171c8de46849c798fb7f1') in 0.012232 seconds
+  Import took 0.014629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002446 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Drink_02.prefab
+  artifactKey: Guid(4f544c14cf326b843a5f07e7de41640e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Drink_02.prefab using Guid(4f544c14cf326b843a5f07e7de41640e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b7d43ed1b3171c8de46849c798fb7f1') in 0.007246 seconds
+  Import took 0.010105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.350401 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Drink_03.prefab
+  artifactKey: Guid(ff586fe8e17ca3a4d9669e3c824a0e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Drink_03.prefab using Guid(ff586fe8e17ca3a4d9669e3c824a0e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa46abb207d8ef1015ba03da443a8a3') in 0.014278 seconds
+  Import took 0.016977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000898 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Drink_03.prefab
+  artifactKey: Guid(ff586fe8e17ca3a4d9669e3c824a0e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Drink_03.prefab using Guid(ff586fe8e17ca3a4d9669e3c824a0e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa46abb207d8ef1015ba03da443a8a3') in 0.007653 seconds
+  Import took 0.010422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.021418 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Eclair_Chocolate.prefab
+  artifactKey: Guid(c0c0fda6f19f74b48a689470425ef5a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Eclair_Chocolate.prefab using Guid(c0c0fda6f19f74b48a689470425ef5a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41cbe4dc290a3463eae86e2959962a43') in 0.012355 seconds
+  Import took 0.049511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.252704 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Egg.prefab
+  artifactKey: Guid(9425302b7c44a194bb8782c22588bfe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Egg.prefab using Guid(9425302b7c44a194bb8782c22588bfe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93b23b2ada1bca17c12ec15a548a9dda') in 0.012907 seconds
+  Import took 0.025194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.861641 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Fries.prefab
+  artifactKey: Guid(9b21be590f33e0d4ba19fec73ce555da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Fries.prefab using Guid(9b21be590f33e0d4ba19fec73ce555da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56b5615a26b5c01eaf5479a78408fada') in 0.013349 seconds
+  Import took 0.015874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000908 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Fries.prefab
+  artifactKey: Guid(9b21be590f33e0d4ba19fec73ce555da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Fries.prefab using Guid(9b21be590f33e0d4ba19fec73ce555da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56b5615a26b5c01eaf5479a78408fada') in 0.012055 seconds
+  Import took 0.014992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 107.152310 seconds.
+  path: Assets/Prefabs/Horizontal 3.prefab
+  artifactKey: Guid(a9a5f2acc35ae034fa78e0bd241551b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Horizontal 3.prefab using Guid(a9a5f2acc35ae034fa78e0bd241551b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e5d640127b7495ab1a46f4a74d2ee1') in 0.015541 seconds
+  Import took 0.019394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004572 seconds.
+  path: Assets/Prefabs/Horizontal 3.prefab
+  artifactKey: Guid(a9a5f2acc35ae034fa78e0bd241551b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Horizontal 3.prefab using Guid(a9a5f2acc35ae034fa78e0bd241551b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e5d640127b7495ab1a46f4a74d2ee1') in 0.013620 seconds
+  Import took 0.016617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.805984 seconds.
+  path: Assets/Prefabs/H3Fries.prefab
+  artifactKey: Guid(a9a5f2acc35ae034fa78e0bd241551b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/H3Fries.prefab using Guid(a9a5f2acc35ae034fa78e0bd241551b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29b341956d804e39a74ce2783d480b7c') in 0.013179 seconds
+  Import took 0.016050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.988143 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Gyoza.prefab
+  artifactKey: Guid(d42d1e0069f8f9d4f893cba184403ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Gyoza.prefab using Guid(d42d1e0069f8f9d4f893cba184403ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f598b8893642b4894ccab548d975231') in 0.015008 seconds
+  Import took 0.027189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.730828 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/HotDog.prefab
+  artifactKey: Guid(180079041c49091489282ea6ecb31fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/HotDog.prefab using Guid(180079041c49091489282ea6ecb31fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '641d15535183120af68d4ed86fd97b12') in 0.012563 seconds
+  Import took 0.024703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.843972 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/IceCream.prefab
+  artifactKey: Guid(308c89097ca814e44b0ff03d3c0c633b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/IceCream.prefab using Guid(308c89097ca814e44b0ff03d3c0c633b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '437dd47c50408b2931951a5d23d017b8') in 0.023342 seconds
+  Import took 0.025948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.980676 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/IceCream_Cone.prefab
+  artifactKey: Guid(87a32384fe2633648996ab825d5f4b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/IceCream_Cone.prefab using Guid(87a32384fe2633648996ab825d5f4b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfa390d2787aa99575ff042690fe3f44') in 0.012794 seconds
+  Import took 0.015969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001973 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/IceCream_Cone.prefab
+  artifactKey: Guid(87a32384fe2633648996ab825d5f4b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/IceCream_Cone.prefab using Guid(87a32384fe2633648996ab825d5f4b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfa390d2787aa99575ff042690fe3f44') in 0.019820 seconds
+  Import took 0.023519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.699033 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Omelette.prefab
+  artifactKey: Guid(9bd75eed56fa9054984b2ba5678076ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Omelette.prefab using Guid(9bd75eed56fa9054984b2ba5678076ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d1679fda9b666b6a12193efa87e2ec9') in 0.022018 seconds
+  Import took 0.024539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 272.267098 seconds.
+  path: Assets/Prefabs/Vertical 3.prefab
+  artifactKey: Guid(183421fd8bb8869459b0fe25938b6978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Vertical 3.prefab using Guid(183421fd8bb8869459b0fe25938b6978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2740a8af2fcec9fee8626c7ee933216b') in 0.013725 seconds
+  Import took 0.016753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004962 seconds.
+  path: Assets/Prefabs/Vertical 3.prefab
+  artifactKey: Guid(183421fd8bb8869459b0fe25938b6978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Vertical 3.prefab using Guid(183421fd8bb8869459b0fe25938b6978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2740a8af2fcec9fee8626c7ee933216b') in 0.009227 seconds
+  Import took 0.011563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.103791 seconds.
+  path: Assets/Prefabs/V3Hotdog.prefab
+  artifactKey: Guid(183421fd8bb8869459b0fe25938b6978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/V3Hotdog.prefab using Guid(183421fd8bb8869459b0fe25938b6978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b1600b8b2a3a5e091a9f24db909c009') in 0.012930 seconds
+  Import took 0.015409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.760854 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Onion.prefab
+  artifactKey: Guid(097013ceeb8052648be3891c0984df9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Onion.prefab using Guid(097013ceeb8052648be3891c0984df9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe6dbeead0b942b1ac83f5fc15cb5ff3') in 0.016512 seconds
+  Import took 0.019759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002753 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Onion.prefab
+  artifactKey: Guid(097013ceeb8052648be3891c0984df9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Onion.prefab using Guid(097013ceeb8052648be3891c0984df9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe6dbeead0b942b1ac83f5fc15cb5ff3') in 0.007592 seconds
+  Import took 0.010458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.273793 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Onigiri.prefab
+  artifactKey: Guid(b93286b7dfa93834caec88d1044606c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Onigiri.prefab using Guid(b93286b7dfa93834caec88d1044606c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32a62c288a0bfcda4b16151d54587a53') in 0.013020 seconds
+  Import took 0.015749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001635 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Onigiri.prefab
+  artifactKey: Guid(b93286b7dfa93834caec88d1044606c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Onigiri.prefab using Guid(b93286b7dfa93834caec88d1044606c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32a62c288a0bfcda4b16151d54587a53') in 0.011576 seconds
+  Import took 0.014053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 153.449789 seconds.
+  path: Assets/Prefabs/Horizontal 4.prefab
+  artifactKey: Guid(04949b343b7ee7149a907d49f22c0cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Horizontal 4.prefab using Guid(04949b343b7ee7149a907d49f22c0cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '366eb8246ebc4c25a871cdec7c7c7b59') in 0.025842 seconds
+  Import took 0.028709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.102776 seconds.
+  path: Assets/Prefabs/H4Muffin.prefab
+  artifactKey: Guid(04949b343b7ee7149a907d49f22c0cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/H4Muffin.prefab using Guid(04949b343b7ee7149a907d49f22c0cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79f56bbaab03821cecc9ebc3ff78e97b') in 0.013818 seconds
+  Import took 0.018170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.379464 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Pepper.prefab
+  artifactKey: Guid(789e3e78d5881e844ba2a11afa41cbde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Pepper.prefab using Guid(789e3e78d5881e844ba2a11afa41cbde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20305f0a965d32723753c54a89777c73') in 0.014954 seconds
+  Import took 0.018115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000837 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Pepper.prefab
+  artifactKey: Guid(789e3e78d5881e844ba2a11afa41cbde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Pepper.prefab using Guid(789e3e78d5881e844ba2a11afa41cbde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20305f0a965d32723753c54a89777c73') in 0.009371 seconds
+  Import took 0.012854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.664383 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Pineapple.prefab
+  artifactKey: Guid(80c29c7e0bd64654f8f59dda85e24897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Pineapple.prefab using Guid(80c29c7e0bd64654f8f59dda85e24897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c899e4f4f5953fec5db3b1f5ac478603') in 0.012560 seconds
+  Import took 0.015244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001885 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Pineapple.prefab
+  artifactKey: Guid(80c29c7e0bd64654f8f59dda85e24897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Pineapple.prefab using Guid(80c29c7e0bd64654f8f59dda85e24897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c899e4f4f5953fec5db3b1f5ac478603') in 0.014293 seconds
+  Import took 0.017097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 173.475009 seconds.
+  path: Assets/Prefabs/Vertical 4.prefab
+  artifactKey: Guid(4900a11faed7ea846b909af01dfd7856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Vertical 4.prefab using Guid(4900a11faed7ea846b909af01dfd7856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '866745366cf45df3a5d078d016c02dec') in 0.026813 seconds
+  Import took 0.030457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.110780 seconds.
+  path: Assets/Prefabs/V4Pineapple.prefab
+  artifactKey: Guid(4900a11faed7ea846b909af01dfd7856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/V4Pineapple.prefab using Guid(4900a11faed7ea846b909af01dfd7856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51051b70eaa943fa4c661d910ef0a65e') in 0.012126 seconds
+  Import took 0.015588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 159.851882 seconds.
+  path: Assets/Prefabs/Horizontal 5.prefab
+  artifactKey: Guid(a50fd243446f0bb4fba9a7d8ab562606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Horizontal 5.prefab using Guid(a50fd243446f0bb4fba9a7d8ab562606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba57c8b36b7ac248d4433b69470dc24') in 0.025361 seconds
+  Import took 0.027807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000957 seconds.
+  path: Assets/Prefabs/Horizontal 5.prefab
+  artifactKey: Guid(a50fd243446f0bb4fba9a7d8ab562606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Horizontal 5.prefab using Guid(a50fd243446f0bb4fba9a7d8ab562606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba57c8b36b7ac248d4433b69470dc24') in 0.012146 seconds
+  Import took 0.015626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.406864 seconds.
+  path: Assets/Prefabs/H5Steak.prefab
+  artifactKey: Guid(a50fd243446f0bb4fba9a7d8ab562606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/H5Steak.prefab using Guid(a50fd243446f0bb4fba9a7d8ab562606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc54fca4255f2e8ef3f32553988f9f9c') in 0.013847 seconds
+  Import took 0.016660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.424167 seconds.
+  path: Assets/Prefabs/Vertical 5.prefab
+  artifactKey: Guid(23a7aeb857cead44185c0018ce1d48cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Vertical 5.prefab using Guid(23a7aeb857cead44185c0018ce1d48cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de0ae3501b2e5f78915bf44fb16f03da') in 0.024478 seconds
+  Import took 0.028620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.203019 seconds.
+  path: Assets/Prefabs/V5Tomato.prefab
+  artifactKey: Guid(23a7aeb857cead44185c0018ce1d48cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/V5Tomato.prefab using Guid(23a7aeb857cead44185c0018ce1d48cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4ac5378755e5535e74fa460b5694d04') in 0.014982 seconds
+  Import took 0.017470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.628204 seconds.
+  path: Assets/Imports/FREE Food Pack/Prefabs/Bread.prefab
+  artifactKey: Guid(07c1ce2b91eb18f4c83d7d36268a0341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/FREE Food Pack/Prefabs/Bread.prefab using Guid(07c1ce2b91eb18f4c83d7d36268a0341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb59ab900b179c4ce4f597b1fdb663a2') in 0.025830 seconds
+  Import took 0.028808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 172.917836 seconds.
+  path: Assets/Prefabs/H2Burger.prefab
+  artifactKey: Guid(1c13f2a1d33d17945ac15d9bb553c582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/H2Burger.prefab using Guid(1c13f2a1d33d17945ac15d9bb553c582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7b521a6a7d48924371d47fdaac1340e') in 0.016401 seconds
+  Import took 0.019446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002120 seconds.
+  path: Assets/Prefabs/H2Burger.prefab
+  artifactKey: Guid(1c13f2a1d33d17945ac15d9bb553c582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/H2Burger.prefab using Guid(1c13f2a1d33d17945ac15d9bb553c582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7b521a6a7d48924371d47fdaac1340e') in 0.008406 seconds
+  Import took 0.010854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.284631 seconds.
+  path: Assets/Prefabs/H2Avocado.prefab
+  artifactKey: Guid(1c13f2a1d33d17945ac15d9bb553c582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/H2Avocado.prefab using Guid(1c13f2a1d33d17945ac15d9bb553c582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42b176d62e8e6bc5bd3a14cef258fea5') in 0.014736 seconds
+  Import took 0.018077 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000973 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.026 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1503 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.2 MB.
+System memory in use after: 81.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1985.
+Total: 1.870500 ms (FindLiveObjects: 0.109400 ms CreateObjectMapping: 0.028100 ms MarkObjects: 1.700200 ms  DeleteObjects: 0.031300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002539 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.076 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.93 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1503 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.2 MB.
+System memory in use after: 81.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1988.
+Total: 6.132900 ms (FindLiveObjects: 0.315300 ms CreateObjectMapping: 0.068500 ms MarkObjects: 5.712800 ms  DeleteObjects: 0.033500 ms)
 
