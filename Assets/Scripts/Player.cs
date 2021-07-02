@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class Player : MonoBehaviour
 {
@@ -102,6 +101,7 @@ public class Player : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
             animator.SetBool("isJumping", true);
+            audioManager.instance.jumpSFX();
         }
     }
 
@@ -115,7 +115,9 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
-            
+
+            audioManager.instance.hitSFX();
+            audioManager.instance.playDialogue();
             UIManager.instance.UpdateHealth(5);  // to decrease health from health bar
         }
     }
@@ -178,6 +180,7 @@ public class Player : MonoBehaviour
     {
         tmpBomb = Instantiate(bombPrefab[Random.Range(0, bombPrefab.Length)], transform.position + Vector3.up, Quaternion.Euler(180f,0f,0f));
         animator.SetBool("bombDropped", true);
+        audioManager.instance.gotHit();
     }
 
     IEnumerator BombLaunchCountdownRoutine()
@@ -191,6 +194,7 @@ public class Player : MonoBehaviour
     {
         tmpGravity = Instantiate(gravityPrefab, transform.position + Vector3.right, Quaternion.identity);
         animator.SetBool("bombDropped", true);
+        audioManager.instance.gotHit();
 
     }
 

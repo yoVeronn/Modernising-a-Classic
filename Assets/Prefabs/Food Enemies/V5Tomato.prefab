@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 3
   travelEffect: {fileID: 3776659408424295072}
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 19800000, guid: 756d99540142b5e4a8d174e18a6310d9, type: 3}
 --- !u!1001 &3776659408443557216
 PrefabInstance:
   m_ObjectHideFlags: 0

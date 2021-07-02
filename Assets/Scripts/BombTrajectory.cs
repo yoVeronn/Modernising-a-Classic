@@ -40,4 +40,10 @@ public class BombTrajectory : MonoBehaviour
             }
         }
     }
+
+    private void OnDestroy()
+    {
+        audioManager.instance.ExplosionSFX();
+    }
+
 }
