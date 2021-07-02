@@ -11,14 +11,12 @@ public class GameManager : Singleton<GameManager>
     private float minRepeatRate = 1;
     private float maxRepeatRate = 2.5f;
 
-    public bool waveActive = true;
-    public int waveNumber = 1;
+    public bool waveActive = false;
+    public int waveNumber = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnEnemyWave(waveNumber);
-        StartCoroutine(waveTimer());
 
     }
 
@@ -26,29 +24,37 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
 
-
         if (waveActive == false) // prev wave ended
         {
 
-            if (waveNumber < 5)
-            { 
+
+            if (waveNumber < 4)
+            {
+                waveNumber++;
                 UIManager.instance.UpdateWave(waveNumber);
 
                 // UI: change background  //maybe change background lighting
                 SpawnEnemyWave(waveNumber);
                 StartCoroutine(waveTimer());
 
-                waveNumber++;
             }
 
-            else if (waveNumber >= 5)
+            else
             {
                 waveNumber = 5;
-                StopCoroutine(waveTimer());
+                UIManager.instance.UpdateWave(waveNumber);
                 Debug.Log("Final boss");
-                // UI: change background
-                SpawnFinalBoss();
+                FinalBossLevel();
             }
+
+            //else if (waveNumber >= 5)
+            //{
+            //    waveNumber = 5;
+            //    //StopCoroutine(waveTimer());
+            //    Debug.Log("Final boss");
+            //    // UI: change background
+            //    SpawnFinalBoss();
+            //}
         }
     }
 
@@ -65,6 +71,12 @@ public class GameManager : Singleton<GameManager>
         InvokeRepeating("SpawnHorizontalEnemy", startDelay, Random.Range(minRepeatRate, maxRepeatRate));
     }
 
+    void FinalBossLevel()
+    {
+        waveActive = true;
+        InvokeRepeating("SpawnFinalBoss", 0, 2);
+    }
+
     void SpawnVerticalEnemy()
     {
         int verticalIndex = Random.Range(0, waveNumber);
@@ -79,7 +91,6 @@ public class GameManager : Singleton<GameManager>
 
     void SpawnFinalBoss()
     {
-        waveActive = true;
-        Instantiate(finalBoss, new Vector3(20, Random.Range(1, 5), 0), finalBoss.transform.rotation);
+        Instantiate(finalBoss, new Vector3(Random.Range(-5, 5), 10, 0), finalBoss.transform.rotation);
     }
 }

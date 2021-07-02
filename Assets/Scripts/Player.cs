@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         playerRb = GetComponent<Rigidbody>();
-        //enemy = GameObject.Find("Enemy");
     }
 
     // Update is called once per frame

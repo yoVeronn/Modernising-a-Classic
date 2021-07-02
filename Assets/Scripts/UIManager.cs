@@ -21,7 +21,7 @@ public class UIManager : Singleton<UIManager>
 
     public void UpdateWave(int newWave)
     {
-        currentWave += newWave;
+        currentWave = newWave;
     }
 
     public void UpdateHealth(int damage)

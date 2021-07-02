@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     private TransformPlayer transformPlayerScript;
 
     [SerializeField] float enemySpeed = 3;
-    [SerializeField] float enemySpeedGravity = 10;
+    // [SerializeField] float enemySpeedGravity = 10;
     private Rigidbody enemyRb;
     private GameObject player;
     private GameObject playerFat;
