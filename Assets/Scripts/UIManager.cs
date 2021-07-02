@@ -64,11 +64,6 @@ public class UIManager : Singleton<UIManager>
 
     public void RestartLevel()
     {
-        if(Time.timeScale != 1.0f)
-        { 
-            Time.timeScale = 1.0f;
-        }
-
         SceneManager.LoadScene(1);
         OnGameOver.Invoke();
     }
@@ -85,7 +80,7 @@ public class UIManager : Singleton<UIManager>
         score.text = "Score: " + currentScore;
         waveNumber.text = "Wave: " + currentWave;
 
-        if(health == 0)
+        if(health <= 0)
         {
             GameOverScreen();
         }
